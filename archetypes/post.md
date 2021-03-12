@@ -10,8 +10,6 @@ tags: [
 ]
 ---
 
-# Day nn. {title}
-
 # 前言
 
 write something cool...
