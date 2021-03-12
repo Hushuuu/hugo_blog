@@ -7,7 +7,8 @@ image: helena-hertz-wWZzXlDpMog-unsplash.jpg
 categories:
     - Test
     - 测试
-draft: true
+draft: false
+hidden: true
 ---
 
 ## 正文测试

@@ -1,11 +1,11 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: "Twopost"
 description:
-date: {{ .Date }}
+date: 2021-03-12T16:42:54+08:00
 image: 
-draft: true
-license: 
+draft: false
 hidden: false
+license: 
 comments: true
 categories:
     - New
@@ -17,11 +17,11 @@ tags: [
 
 # 前言
 
-write something cool...
+asdasddasdad
 
 # 主要內容
 
-write something cool...
+asdasdsadasdad.
 ```markdown
 <table>
 	<tr>
@@ -31,7 +31,7 @@ write something cool...
 
 # 小結
 
-write something cool...
+asdasdsadasdsadsad
 
 # 參考連結
 

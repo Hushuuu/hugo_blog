@@ -11,6 +11,7 @@ tags = [
 ]
 image = "the-creative-exchange-d2zvqp3fpro-unsplash.jpg"
 draft = true
+hidden= true
 +++
 
 Emoji can be enabled in a Hugo project in a number of ways. 
