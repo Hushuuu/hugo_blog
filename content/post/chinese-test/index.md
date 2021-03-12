@@ -1,15 +1,12 @@
 ---
-title: "中文文章測試"
-description: "第一篇文章"
-image: https://picsum.photos/250/200
-date: 2021-03-11T09:25:07+08:00
+title: Chinese Test
+description: 这是一个副标题
+date: 2020-09-09
+slug: test-chinese
+image: helena-hertz-wWZzXlDpMog-unsplash.jpg
 categories:
-    - Older
-tags: [
-    "hugo",
-    "blog",
-]
-draft: false
+    - Test
+    - 测试
 ---
 
 ## 正文测试
@@ -29,13 +26,14 @@ draft: false
 
 ## 图片
 
-![Photo by Florian Klauer on Unsplash](https://picsum.photos/250/300 "asdfgh") ![Photo by Luca Bravo on Unsplash](https://picsum.photos/270/300) 
-![Photo by Helena Hertz on Unsplash](https://picsum.photos/260/300)  ![Photo by Hudai Gayiran on Unsplash](dog.jpg)
-![Photo bysh](REDPIG.jpg)
+![Photo by Florian Klauer on Unsplash](florian-klauer-nptLmg6jqDo-unsplash.jpg)  ![Photo by Luca Bravo on Unsplash](luca-bravo-alS7ewQ41M8-unsplash.jpg) 
+
+![Photo by Helena Hertz on Unsplash](helena-hertz-wWZzXlDpMog-unsplash.jpg)  ![Photo by Hudai Gayiran on Unsplash](hudai-gayiran-3Od_VKcDEAA-unsplash.jpg)
 
 ```markdown
-<table>
-	<tr>
-	</tr>
-</table>
+![Photo by Florian Klauer on Unsplash](florian-klauer-nptLmg6jqDo-unsplash.jpg)  ![Photo by Luca Bravo on Unsplash](luca-bravo-alS7ewQ41M8-unsplash.jpg) 
+
+![Photo by Helena Hertz on Unsplash](helena-hertz-wWZzXlDpMog-unsplash.jpg)  ![Photo by Hudai Gayiran on Unsplash](hudai-gayiran-3Od_VKcDEAA-unsplash.jpg)
 ```
+
+相册语法来自 [Typlog](https://typlog.com/)

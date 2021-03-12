@@ -1,8 +1,8 @@
-baseurl: https://hushuuu.github.io/
-languageCode: zh-tw
+baseurl: https://example.com
+languageCode: en-us
 theme: hugo-theme-stack
 paginate: 5
-title: TheSite
+title: Example Site
 
 # Change it to your Disqus shortname before using
 disqusShortname: hugo-theme-stack
@@ -31,11 +31,11 @@ params:
 
     dateFormat:
         published: 2006-01-02
-        lastUpdated: 2006-01-02 15:04 MST
+        lastUpdated: 2006-01-02 15:04 MST+8
 
     sidebar:
-        emoji: 𓆐
-        subtitle: For Practice And Note Everythings In Life
+        emoji: 
+        subtitle: For Practice And Note Everythings In Life.
         avatar:
             local: true
             src: img/avatar.png
@@ -99,31 +99,16 @@ params:
         content:
             enabled: true
 
+### Custom menu
+### See https://docs.stack.jimmycai.com/configuration/custom-menu
+### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
     main:
         - identifier: home
-          name: 主頁
+          name: 首頁
           url: /
           weight: -100
           pre: home
-
-        - identifier: about
-          name: 關於
-          url: about
-          weight: -90
-          pre: user
-
-        - identifier: archives
-          name: 封存
-          url: archives
-          weight: -70
-          pre: archives
-
-        - identifier: search
-          name: 搜尋
-          url: search
-          weight: -60
-          pre: search
 
 related:
     includeNewer: true
