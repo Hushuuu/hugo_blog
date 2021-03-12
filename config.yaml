@@ -1,8 +1,8 @@
-baseurl: https://example.com
+baseurl: https://hushuuu.github.io/
 languageCode: en-us
 theme: hugo-theme-stack
 paginate: 5
-title: Example Site
+title: The Site
 
 # Change it to your Disqus shortname before using
 disqusShortname: hugo-theme-stack
