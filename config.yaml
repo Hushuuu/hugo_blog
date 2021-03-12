@@ -1,5 +1,5 @@
 baseurl: https://hushuuu.github.io/
-languageCode: en-us
+languageCode: zh-tw
 theme: hugo-theme-stack
 paginate: 5
 title: TheSite
