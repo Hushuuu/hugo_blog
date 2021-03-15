@@ -3,7 +3,7 @@ title: "{{ replace .Name "-" " " | title }}"
 description:
 date: {{ .Date }}
 image: 
-draft: true
+draft: false
 license: 
 hidden: false
 comments: true
@@ -15,11 +15,11 @@ tags: [
 ]
 ---
 
-# 前言
+## 前言
 
 write something cool...
 
-# 主要內容
+## 主要內容
 
 write something cool...
 ```markdown
@@ -29,11 +29,11 @@ write something cool...
 </table>
 ```
 
-# 小結
+## 小結
 
 write something cool...
 
-# 參考連結
+## 參考連結
 
 >* [url1](https://www.google.com)
 >* [url2]()
