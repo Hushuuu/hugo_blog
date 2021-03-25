@@ -35,7 +35,7 @@ params:
 
     sidebar:
         emoji: 
-        subtitle: For Practice And Note Everythings In Life.
+        subtitle: 紀錄一些筆記。
         avatar:
             local: true
             src: img/avatar.png
