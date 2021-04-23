@@ -28,9 +28,9 @@ tags: [
 ```C#
 //規則:檔名為XXXXViewComponent
 [Microsoft.AspNetCore.Mvc.ViewComponent] //規則: 類別掛上[ViewComponent] Attribute
-public class PkindComponent : Microsoft.AspNetCore.Mvc.ViewComponent //規則: 類別繼承ViewComponent
+public class PkindViewComponent : Microsoft.AspNetCore.Mvc.ViewComponent //規則: 類別繼承ViewComponent
 {
-    public PkindComponent()
+    public PkindViewComponent()
     {
     }
     public IViewComponentResult Invoke()
@@ -47,10 +47,13 @@ public class PkindComponent : Microsoft.AspNetCore.Mvc.ViewComponent //規則: �
 
 在需要呼叫`ViewComponent` 的檢視下加上
 
-```C#
+```html
 @addTagHelper *, 專案名稱
-//再打上<vc 就會自動跑出選項代表成功了
+再打上vc 就會自動跑出選項代表成功了
+<div>
 <vc:XXXX></vc:XXXX>
+</div>
+
 ```
 
 ### 應用
@@ -65,7 +68,7 @@ public class PkindComponent : Microsoft.AspNetCore.Mvc.ViewComponent //規則: �
         {
             _context = context;
         }
-        public async Task<IViewComponentResult> InvokeAsync()
+        public async Task<IViewComponentResult> InvokeAsync(string ddd)
         {
             var list = await _context.PRODUCT //向資料庫拿資料並將list或模型傳回檢視
                 .ToListAsync();
