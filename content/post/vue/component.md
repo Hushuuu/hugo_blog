@@ -1,5 +1,5 @@
 ---
-title: "Vue Component"
+title: "Vue Component(modal)"
 description:
 date: 2022-02-25T14:25:43+08:00
 image: 
