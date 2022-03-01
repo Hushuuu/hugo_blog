@@ -81,7 +81,7 @@ services.AddMvc()
 });
 ```
 
-`掛載轉換器的優先順序`
+`掛載轉換器的優先順序`  
 1.[JsonConverter] 套用至屬性。  
 2.加入至集合的轉換器 Converters 。  
 3.[JsonConverter] 套用至自訂實數值型別或 POCO。  
