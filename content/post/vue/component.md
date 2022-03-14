@@ -27,55 +27,57 @@ tags: [
 `設計template html`
 ```html
 <template id="vue_modalTemplate">
-    <div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">       
-                    <slot name="header">
-                        <h5 class="modal-title">{{msg_title}}</h5>
-                    </slot>
-                </div>
-                <div class="modal-body">
-                    <slot name="body">
-                        {{msg_body}}
-                    </slot>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
-                    <button v-if="submit_func" class="btn btn-sm btn-success" type="button" v-on:click="submit_func">{{submit_text}}</button>
+        <div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" v-bind:class="sizeClass" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <slot name="header">
+                            <h5 class="modal-title">{{msg_title}}</h5>
+                        </slot>
+                    </div>
+                    <div class="modal-body">
+                        <slot name="body">
+                            {{msg_body}}
+                        </slot>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" v-on:click="cancel_func">{{cancel_text}}</button>
+                        <button v-if="submit_func" class="btn btn-primary" type="button" v-on:click="submit_func">{{submit_text}}</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</template>
+    </template>
 ```
 
 ```javascript
 //註冊Component要在實例vue物件之前
-Vue.component('vue_modal', { //vue component name
-        template: '#vue_modalTemplate', //vue template selector
-        props: {
-            "submit_func": Function, //提交方法
-            "submit_text": String, //
-            "msg_title": { type: String, default: function () { return "訊息"; } },
-            "msg_body": {  type: String, default: function () { return "訊息主體"} },
-        }
-    });
-    const vm = new Vue({
-        data() {
-            return {
-                common_msg_title: "",
-                common_msg_body:"",
+Vue.component('vue_modal', {
+            template: '#vue_modalTemplate',
+            props: {
+                "submit_func": Function,
+                "submit_text": String,
+                "msg_title": { type: String, default: function () { return "訊息"; } },
+                "msg_body": { type: String, default: function () { return "訊息主體" } },
+                "cancel_func": {type: Function,default: function () { }},
+                "cancel_text": { type: String, default: function () { return "關閉"; } },
+                "sizeClass": { type: Object, default: function () { return {};}}//:size-class="{'modal-lg':true}" 大的modal
             }
-        },
-        methods: {
-            showMsg(title,msg) {
-                this.common_msg_title = title;
-                this.common_msg_body = msg;
-                $("#common_msg_modal").modal('show');
+        });
+    const VueMessage = new Vue({
+            data: function () {
+                return {
+                    common_msg_title: "訊息",
+                    common_msg_body: "",
+                }
+            },
+            methods: {
+                show(msg) {
+                    this.common_msg_body = msg;
+                    $("#common_msg_modal").modal('show');
+                }
             }
-        }
-    }).$mount('#vueDiv');//掛載
+        }).$mount("#msgVueDiv")
 ```
 
 `實際在Html使用`  
@@ -85,7 +87,7 @@ Vue.component('vue_modal', { //vue component name
 ```
 `只要在js呼叫vue實例中的showMsg方法就能叫出訊息視窗`
 ```javascript
-vm.showMsg('標題','訊息內容');
+VueMessage.showMsg('標題','訊息內容');
 ```
 
 ### 傳遞進子元件
