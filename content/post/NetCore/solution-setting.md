@@ -10,7 +10,7 @@ comments: true
 categories:
     - NetCore
 tags: [
-    "NetCore",
+    "NetCore"
     
 ]
 ---
@@ -33,13 +33,3 @@ tags: [
 	    </MsDeploySkipRules>
     </ItemGroup>
 ```
-
-
-## 小結
-
-write something cool...
-
-## 參考連結
-
->* [url1](https://www.google.com)
->* [url2]()

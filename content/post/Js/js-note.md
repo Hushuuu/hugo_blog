@@ -28,3 +28,31 @@ $(document).ready(function(){
 
 });
 ```
+
+### 轉千分位
+
+```javascript
+/**
+ * 轉千分位
+ * @param {any} num
+ */
+function toCurrency(num) {
+    var parts = num.toString().split('.');
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return parts.join('.');
+}
+```
+### Date擴充
+```JAVASCRIPT
+//增加日期
+Date.prototype.addDays = function (days) {
+    var date = new Date(this.valueOf());
+    date.setDate(date.getDate() + days);
+    return date;
+}
+//轉為yyyy-MM-dd
+Date.prototype.toInputString = function () {
+    let date = new Date(this.valueOf());
+    return date.toISOString().split('T')[0];
+}
+```

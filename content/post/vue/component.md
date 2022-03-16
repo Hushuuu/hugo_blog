@@ -11,7 +11,7 @@ categories:
     - VueJs
 tags: [
     "VueJs",
-    "javascript",
+    "javascript"
 ]
 ---
 
