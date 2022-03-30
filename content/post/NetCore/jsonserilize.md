@@ -64,8 +64,8 @@ JsonSerializerOptions options = new JsonSerializerOptions();
 options.Converters.Add(new OnlyDateConverter());
 return Json(obj2, options);
 ```
-`全域startup設定`
-`除了日期轉換，順便處理會被轉小寫+中文字被編碼的問題`
+`startup設定 注意這設定只會影響到Controller.Json retrun`
+`除了日期轉換，順便處理會被轉小寫+中文字被編碼的問題` 
 ```C#
 //JSON預設修改
 services.AddMvc()
@@ -90,7 +90,11 @@ services.AddMvc()
 ## 小結
 
 `net core`預設使用的`Text.Json`據說比較輕量但使用上起來得設定一些設定才能用的順手  
+若是手動呼叫`JsonSerializer`不會吃到startup的設定，必須自行給`option`或擴充共用
+
 
 ## 參考連結
 
 >* [url1](https://docs.microsoft.com/zh-tw/dotnet/standard/serialization/system-text-json-converters-how-to?pivots=dotnet-5-0)
+>* [url2](https://blog.darkthread.net/blog/aspnet-core-json-setting/)
+>* [url3](https://medium.com/@mvpdw06/net-core-3-1-%E5%BE%8C%E8%BD%89%E7%A7%BB-newtonsoft-json-%E8%87%B3-system-text-json-9727d774f92d)
