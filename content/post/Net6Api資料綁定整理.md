@@ -43,9 +43,9 @@ public string Post([FromQuery] string str);
 //json **特別不同
 public string Post([FromBody] string str);
 //在請求時必須只傳入"\"value\""
-//因為net6 在model binding時使用Text.Json
-//如果試著反序列化就會拋錯
-//失敗` The JSON value could not be converted to System.String.`
+//在model binding時使用Text.Json
+//如果試著反序列化就會拋錯 The JSON value could not be converted to System.String.
+//失敗
 JsonSerializer.Deserialize<string>("{\"str\":\"value\"}");
 //正確
 JsonSerializer.Deserialize<string>("\"value\"");
@@ -58,9 +58,10 @@ JsonSerializer.Deserialize<string>("\"value\"");
 除了參數少的`QueryString`直接寫多個參數  
 其他簡單一點就是全部都定義類別來接值  
 就可以解決大部分的情況  
-有些問題在之前.netFramework是不會遇到的  
-應該與`Text.Json`相關(.netFramework是使用`Json.NET`)  
+有些問題在之前`.netFramework`是不會遇到的  
 所以開發上要留意一下
  
-  
- 
+## 參考連結
+
+>* [url1](https://stackoverflow.com/questions/58150652/asp-net-core-3-0-frombody-string-content-returns-the-json-value-could-not-be)
+>* [url2](https://blog.yowko.com/aspnet-core-x-www-form-urlencoded/)
