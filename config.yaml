@@ -1,7 +1,7 @@
 baseurl: https://hushuuu.github.io/
 languageCode: en-us
 theme: hugo-theme-stack
-paginate: 5
+pagerSize: 5
 title: The Site
 
 # Change it to your Disqus shortname before using
